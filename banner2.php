@@ -3,7 +3,7 @@
 header("Content-type: image/png");
 include 'query.php';
 $font = 'minecraft.ttf';
-$online = 'Online:'.$currentplayers.'/'.$maxplayers.'';
+$online = 'Its Online:'.$currentplayers.'/'.$maxplayers.'';
 if($ostatus == 2) {
 $hostname = $_GET['name'];
 }
@@ -21,9 +21,9 @@ if($ostatus == 1) {
 imagefttext($im, 13, 0, 10, 90, $green, $font, $online);
 }
 else {
-imagefttext($im, 13, 0, 10, 90, $red, $font, 'Offline');
+imagefttext($im, 13, 0, 10, 90, $red, $font, 'Its Offline');
 }
-imagefttext($im, 10, 0, 395, 90, $white, $font, 'banner.99leonchang.com');
+imagefttext($im, 10, 0, 395, 90, $white, $font, 'PocketBukkit.com');
 imagepng($im);
 imagedestroy($im);
 
